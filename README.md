@@ -24,8 +24,14 @@ GitHub
 https://github.com/jimbolikesgithub/my-portfoilo-je
 <br/>
 
+Heroku 
+----------
+https://dashboard.heroku.com/apps/my-portfolio-20-je
+<br/>
+
 Screenshot - 
 ----------
+![my-react-portfolio-screenshot](https://user-images.githubusercontent.com/97565085/170593670-2f9ffdf9-a3e1-40be-bc4b-c28cc39ecda6.png)
 
 
 
