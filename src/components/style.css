@@ -1,0 +1,515 @@
+/*
+*  html5resetcss (don't change these!)
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+/* (don't change these! ^^^) */
+/* ------------------------- */
+
+/* Font-Family */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+/* Universal Selector */
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Body */
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --lg-blue: #92CCCE; /* Light blue */
+    --dk-blue: #445877; /* Dark blue*/
+    --lg-white: #fff; /* White */
+    --black: #000; /* Black */
+    --gradient: linear-gradient(62deg, #dea1ca 0%, #80c8bd 100%);
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--lg-blue);
+}
+
+header h1 {
+    position: relative;
+    font-size: 3em;
+    background-color: var(--dk-blue);
+    color: var(--lg-white);
+    padding: 4px .5em 4px 2em;
+    margin: 10px;
+    right: 10px;
+}
+
+/* Nav */
+nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul li {
+    padding: 0 3em 0 0;
+    font-size: 1.3em;
+}
+
+ul li a {
+    color: var(--dk-blue);
+    text-decoration: none;
+}
+
+ul li a::before {
+    background: var(--dk-blue);
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    transition: all ease-in-out 200ms;
+}
+
+ul li a:hover::before {
+    width: 100%;
+    transition: all ease-in-out 200ms;
+}
+
+/* Banner */
+#banner {
+    background-image: url(./images/portfolio-header.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#banner p {
+    position: relative;
+    font-size: 2em;
+    background-color: var(--dk-blue);
+    color: var(--lg-white);
+    top: 2em;
+    padding: 10px;
+}
+
+
+/* About Me */
+#about-me {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em;
+}
+
+#about-me h2 {
+    color: var(--dk-blue);
+    font-size: 300%;
+    text-align: right;
+    flex: 0 0 16%;
+    padding-right: 15px;
+    border-right: 4px solid var(--dk-blue);
+}
+
+.about-me-content {
+    padding: 0 3em;
+    width: 70%;
+}
+
+.about-me-content p {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+/* Projects */
+#projects { 
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2em;
+}
+
+#projects h2 {
+    color: var(--dk-blue);
+    font-size: 3em;
+    flex: 0 0 16%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--dk-blue);
+}
+
+.project-cards {
+    position: relative;
+    flex: 0 0 69%;
+    left: 3em;
+
+}
+
+.flex-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-img {
+    display: flex;
+    background-blend-mode:lighten;
+    background-color: var(--dk-blue);
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border: .5em solid var(--lg-blue);
+    padding-bottom: 4em;
+    margin: .5em;
+    text-decoration: none;
+    flex: 0 0 calc(50% - 40px); /* FINALLY FIGURED THIS OUT AFTER LIKE TWO DAYS */
+    transition: .5s ease-in-out;
+}
+
+.project-img:hover {
+    border: .5em solid var(--dk-blue);
+    background-color: transparent;
+    transition: .5s ease-in-out;
+}
+
+.project-img:first-child {
+    flex: 0 0 100%;
+    height: 400px;
+}
+
+.aadandw {
+    background-image: url(./images/hw-img-1.png);
+}
+
+.fanpage {
+    background-image: url(./images/hw-img-2.png);
+}
+
+.survey {
+    background-image: url(./images/hw-img-3.png);
+}
+
+.timeline {
+    background-image: url(./images/hw-img-4.png);
+}
+
+.landing-page {
+    background-image: url(./images/hw-img-5.png);
+}
+
+.inner-text {
+    display: flex;
+    position: relative;
+    top: 85%;
+}
+
+.inner-text p {
+    color: var(--dk-blue);
+    font-size: 2em;
+    background-color: var(--lg-blue);
+    padding: 10px;
+    transition: .5s ease-in-out;
+}
+
+.inner-text p:hover {
+    color: var(--lg-white);
+    background-color: var(--dk-blue);
+    transition: .5s ease-in-out;
+}
+
+
+/* Contact Me */
+#contact-me {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+
+#contact-me > div {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    left: 4em;
+    width: 70%;
+}
+
+#contact-me h2 {
+    color: var(--dk-blue);
+    font-size: 3em;
+    flex: 0 0 17%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--dk-blue);
+}
+
+#contact-me p {
+    padding: 0 3em 0 0;
+    font-size: 1.3em;
+    color: var(--dk-blue);
+}
+
+#contact-me p a {
+    text-decoration: none;
+    color: var(--dk-blue);
+}
+
+#contact-me p a::before {
+    background: var(--dk-blue);
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    transition: all ease-in-out 200ms;
+}
+
+#contact-me p a:hover::before {
+    width: 100%;
+    transition: all ease-in-out 200ms;
+}
+
+
+/* Media Query */
+
+@media screen and (max-width: 877px) {
+    /* Header */
+    header {
+        position: relative;
+        display: block;
+        background-color: var(--dk-blue);
+    }
+
+    header h1 {
+        position: relative;
+        width: 100%;
+        font-size: 3em;
+        background-color: var(--lg-white);
+        color: var(--dk-blue);
+        padding: 0;
+        margin: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+        /* Nav */
+        nav {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 .8em 0;
+        }
+
+        ul li a {
+            color: var(--lg-white);
+            text-decoration: none;
+        }
+    
+        ul li a:hover {
+            color: var(--lg-white)
+        }
+    
+        ul li a::before {
+            background: var(--lg-white);
+            content: '';
+            display: block;
+            width: 0%;
+            height: 3px;
+            transition: all ease-in-out 200ms;
+        }
+
+    
+    /* Banner */
+    #banner {
+        background-image: url("https://wallpaperaccess.com/full/1713248.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #banner p {
+        position: relative;
+        font-size: 2em;
+        background-color: var(--dk-blue);
+        color: var(--lg-white);
+        top: 0;
+        padding: 10px;
+    }
+
+
+        /* About Me */
+    #about-me {
+        display: block;
+        margin: 0;
+    }
+
+    #about-me h2 {
+        width: 100%;
+        color: var(--dk-blue);
+        font-size: 300%;
+        text-align: center;
+        padding: 0.5em 0;
+        border-bottom: 4px solid var(--dk-blue);
+    }
+
+    .about-me-content {
+        padding: 2em 0 0 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-me-content p {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+
+    /* Projects */
+    #projects { 
+        display: block;
+        margin: 0;
+    }
+    
+    #projects h2 {
+        width: 100%;
+        color: var(--dk-blue);
+        font-size: 300%;
+        text-align: center;
+        padding: 0.5em 0;
+        border-bottom: 4px solid var(--dk-blue);
+    }
+
+    .project-cards {
+        position: relative;
+        flex: none;
+        margin: 1em 0 0 0;
+        left: 0;
+
+}
+
+    .flex-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-img {
+        display: flex;
+        background-blend-mode:lighten;
+        background-color: var(--dk-blue);
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        border: .5em solid var(--lg-blue);
+        padding-bottom: 4em;
+        margin: .5em;
+        text-decoration: none;
+        flex: 0 0 50%; /* FINALLY FIGURED THIS OUT AFTER LIKE TWO DAYS */
+        transition: .5s ease-in-out;
+    }
+
+    .project-img:first-child {
+        flex: 0 0 50%;
+        height: auto;
+    }
+
+
+    /* Contact Me */
+    #contact-me {
+        display: block;
+        margin: 0;
+    }
+
+    #contact-me > div {
+        padding: 1em 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact-me h2 {
+        width: 100%;
+        color: var(--dk-blue);
+        font-size: 300%;
+        text-align: center;
+        padding: 0.5em 0;
+        border-bottom: 4px solid var(--dk-blue);
+    }
+
+    #contact-me p {
+        padding: 0 3em 0 0;
+        font-size: 14px;
+        color: var(--dk-blue);
+    }
+    
+}
+
+@media screen and (max-width: 670px) {
+        
+    /* Nav */
+        nav {
+            width: 100%;
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        ul li a:hover {
+            color: var(--dk-blue)
+        }
+    
+        ul li a::before {
+            position: relative;
+            background: var(--dk-blue);
+            content: '';
+            display: block;
+            width: 100%;
+            height: 6px;
+            transition: all ease-in-out 200ms;
+        }
+}
