@@ -242,6 +242,36 @@ ul li a:hover::before {
     transition: .5s ease-in-out;
 }
 
+/* Resume */
+#resume {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2em;
+}
+
+#resume h2 {
+    color: var(--dk-blue);
+    font-size: 3em;
+    flex: 0 0 16%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--dk-blue);
+}
+
+.resume-div {
+    padding: 1em 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    left: 28em;
+}
+
+.resume-link {
+    text-decoration: none;
+}
 
 /* Contact Me */
 #contact-me {
@@ -411,6 +441,31 @@ ul li a:hover::before {
         border-bottom: 4px solid var(--dk-blue);
     }
 
+    /* Resume */
+    #resume {
+        display: block;
+        margin: 0;
+    }
+
+    #resume h2 {
+        width: 100%;
+        color: var(--dk-blue);
+        font-size: 300%;
+        text-align: center;
+        padding: 0.5em 0;
+        border-bottom: 4px solid var(--dk-blue);
+    }
+
+    .resume-div {
+        padding: 1em 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        left: 0em;
+    }
+
     .project-cards {
         position: relative;
         flex: none;
@@ -446,7 +501,6 @@ ul li a:hover::before {
         flex: 0 0 50%;
         height: auto;
     }
-
 
     /* Contact Me */
     #contact-me {
@@ -502,7 +556,7 @@ ul li a:hover::before {
         ul li a:hover {
             color: var(--dk-blue)
         }
-    
+        
         ul li a::before {
             position: relative;
             background: var(--dk-blue);
